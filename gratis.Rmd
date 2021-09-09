@@ -77,15 +77,20 @@ options(digits = 3, width = 63)
 
 ## GRATIS package
 
+\begin{textblock}{10}(0.5,1.5)
 \textbf{G}ene\textbf{RA}ting \textbf{TI}me \textbf{S}eries with diverse\newline and controllable characteristics
+\end{textblock}
 
-\vspace*{4.5cm}
+\begin{textblock}{12}(0.5,7.7)
+\begin{block}{}
+\begin{itemize}
+\item \url{https://github.com/ykang/gratis}
+\item \url{https://cran.r-project.org/package=gratis}
+\end{itemize}
+\end{block}
+\end{textblock}
 
-* https://github.com/ykang/gratis
+\placefig{6.8}{1.5}{width=5.6cm}{gratishex}
 
-* \mbox{}\rlap{\url{https://cran.r-project.org/package=gratis}}
-
-\placefig{7.5}{2}{width=5cm}{gratishex}
-
-\vspace*{10cm}
+\placefig{0.5}{2.7}{width=5.3cm}{Feng_Yanfei}
 
