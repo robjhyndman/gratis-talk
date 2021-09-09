@@ -1,0 +1,91 @@
+---
+title: "GRATIS: GeneRAting TIme Series with diverse and controllable characteristics"
+date: "10 September 2021"
+author: "Rob J Hyndman"
+toc: false
+output:
+  binb::monash:
+    colortheme: monashwhite
+    fig_width: 8
+    fig_height: 5
+    highlight: tango
+    keep_tex: yes
+    includes:
+      in_header: preamble.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = TRUE
+)
+library(tidyverse)
+library(lubridate)
+library(tsibble)
+library(feasts)
+set.seed(20190927)
+options(digits = 3, width = 63)
+```
+
+
+## Time series features
+
+\begin{textblock}{12}(0.1,1.3)\fontsize{13}{15}\sf
+\begin{multicols}{2}
+  \begin{itemize}\tightlist
+    \item seasonal period(s)
+    \item length
+    \item ACF and PACF based features - calculated on raw, differenced, and remainder series.
+    \item strength of seasonality
+    \item strength of trend
+    \item peaks, troughs
+    \item spectral entropy
+    \item linearity
+    \item curvature
+    \item spikiness
+    \item stability
+    \item lumpiness
+    \item Hurst exponent
+    \item nonlinearity
+    \item unit root test statistics
+    \item crossing points, flat spots
+    \item ARCH/GARCH statistics and ACF of squared series and residuals.
+    \end{itemize}
+\end{multicols}
+\end{textblock}
+
+
+## Mixture autoregressive (MAR) models
+
+\begin{block}{AR(p) model}
+\centerline{$x_t= \phi_0 + \phi_1x_{t-1} + \cdots + \phi_p x_{t-p} + \varepsilon_t, \quad \varepsilon_t \sim N(0,\sigma^2)$}
+\end{block}\pause
+
+\begin{block}{MAR\((K; p_1, p_2, \dots,p_K)\) model}
+\centerline{$x_t= \phi_{k0} + \phi_{k1}x_{t-1} + \cdots + \phi_{kp} x_{t-p_k} + \varepsilon_t, \quad \varepsilon_t \sim N(0,\sigma^2_k)$}
+\mbox{}\hfill with probability $\alpha_k$, \qquad $\alpha_1 + \cdots + \alpha_K = 1$.
+\end{block}\pause
+
+\begin{alertblock}{MAR models}
+\begin{itemize}\item can contain multiple stationary or non-stationary autoregressive components.
+\item can handle nonlinearity, non-Gaussianity, cycles and  heteroskedasticity
+\end{itemize}
+\end{alertblock}
+
+
+## GRATIS package
+
+\textbf{G}ene\textbf{RA}ting \textbf{TI}me \textbf{S}eries with diverse\newline and controllable characteristics
+
+\vspace*{4.5cm}
+
+* https://github.com/ykang/gratis
+
+* \mbox{}\rlap{\url{https://cran.r-project.org/package=gratis}}
+
+\placefig{7.5}{2}{width=5cm}{gratishex}
+
+\vspace*{10cm}
+
