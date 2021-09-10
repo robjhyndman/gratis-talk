@@ -94,3 +94,25 @@ options(digits = 3, width = 63)
 
 \placefig{0.5}{2.7}{width=5.3cm}{Feng_Yanfei}
 
+
+## More information
+\fontsize{18}{20}\sf
+
+\vspace*{1cm}
+
+\begin{block}{}
+\url{robjhyndman.com/seminars/gratis/}
+\end{block}
+
+\begin{textblock}{8}(4.4,5.2)
+\begin{alertblock}{Find me at ...}
+\href{https://twitter.com/robjhyndman}{\faicon{twitter} @robjhyndman}
+
+\href{https://github.com/robjhyndman}{\faicon{github}  @robjhyndman}
+
+\href{https://robjhyndman.com}{\faicon{home} robjhyndman.com}
+
+\href{mailto:rob.hyndman@monash.edu}{\faicon{envelope}  rob.hyndman@monash.edu}
+\end{alertblock}
+\end{textblock}
+\vspace*{10cm}

@@ -29,22 +29,22 @@ x <- generate_ts_with_target(
   target = c(0.2, 0.6, 0.6, 0.7, 5),
   parallel = FALSE
 )
-tsfeatures(x)[,c("entropy", "x_acf1", "seas_acf1", "seasonal_strength", "peak")]
+tsfeatures(x)[, c("entropy", "x_acf1", "seas_acf1", "seasonal_strength", "peak")]
 x %>% ggtsdisplay(plot.type = "spectrum")
 x %>% ggseasonplot()
 
 # Generate from 3 component MAR model to mimic the AirPassengers series
 my_features <- function(x) {
   output <- c(tsfeatures(x))
-  output['lambda'] <- BoxCox.lambda(x)
-  output['entropy'] <- entropy(x)
+  output["lambda"] <- BoxCox.lambda(x)
+  output["entropy"] <- entropy(x)
   unlist(output)
 }
 air_features <- my_features(AirPassengers)
 set.seed(1)
 x <- generate_ts_with_target(
   n = 1,
-  ts.length=length(AirPassengers),
+  ts.length = length(AirPassengers),
   freq = 12,
   seasonal = 1,
   features = "my_features",
@@ -53,7 +53,7 @@ x <- generate_ts_with_target(
 )
 my_features(AirPassengers)
 my_features(x)
-AirPassengers %>% ggtsdisplay(plot.type = "spectrum") 
+AirPassengers %>% ggtsdisplay(plot.type = "spectrum")
 x %>% ggtsdisplay(plot.type = "spectrum")
 
 # Shiny app
